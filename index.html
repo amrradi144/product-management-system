@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2> crud</h2>
+            <p> product management system</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" placeholder="product name" id="title">
+            <div class="price">
+                <input onkeyup="gettotal()" type="number" placeholder="price" id="price">
+                <input onkeyup="gettotal()" type="number" placeholder="taxes" id="taxes">
+                <input onkeyup="gettotal()" type="number" placeholder="ads" id="ads">
+                <input onkeyup="gettotal()" type="number" placeholder="discount" id="discount">
+                <small id="total">  </small>
+            </div>
+            <input type="text" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="create">Create</button>
+
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchdata(this.value)" type="text" placeholder="search" id="search">
+                <div class="btns">
+                    <button onclick="getsearchmood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getsearchmood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+
+            <div id="deleteall">
+                <button> Delete All </button>
+            </div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>category</th>
+                    <th>total</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    
+                    
+                </tbody>
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+    <i  id="up" class="fa-solid fa-arrow-up"></i>   
+    <!-- <i class="fa-solid fa-arrow-up"></i> -->
+    <script src="main.js"></script>
+</body>
+</html>
